@@ -1,0 +1,30 @@
+{
+  "realm": "gatepost",
+  "enabled": true,
+  "displayName": "Gatepost local identity broker",
+  "registrationAllowed": false,
+  "loginWithEmailAllowed": true,
+  "clients": [
+    {
+      "clientId": "gatepost-web",
+      "name": "Gatepost Web",
+      "enabled": true,
+      "clientAuthenticatorType": "client-secret",
+      "secret": "local-dev-secret",
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": false,
+      "redirectUris": ["http://localhost:3000/api/auth/callback/enterprise-sso"],
+      "webOrigins": ["http://localhost:3000"],
+      "protocol": "openid-connect",
+      "defaultClientScopes": ["web-origins", "acr", "roles", "profile", "email", "groups"]
+    }
+  ],
+  "groups": [
+    { "name": "gatepost-owners" },
+    { "name": "security-admins" },
+    { "name": "directory-admins" },
+    { "name": "application-admins" },
+    { "name": "identity-helpdesk" },
+    { "name": "security-audit" }
+  ]
+}

@@ -1,0 +1,5 @@
+export const knowledgeArticles = [
+  {id:"policy",title:"Adaptive access decisions",summary:"Policies evaluate application, identity, authenticator, device posture, network zone, geo-velocity, and session risk.",content:"Every decision records the matched rule and inputs. Dry-run policy versions log the decision they would have made without changing enforcement.",tags:["policy","adaptive","risk","dry run"]},
+  {id:"keys",title:"Signing-key custody",summary:"Private signing material remains in customer-controlled KMS or Key Vault and is never returned to application memory.",content:"Rotation publishes new verification keys before activation, keeps overlap for validation, and records all lifecycle events in the audit trail.",tags:["keys","kms","jwks","rotation"]},
+  {id:"sessions",title:"Session assurance",summary:"Gatepost supports step-up through ACR and AMR, concurrent limits, forced reauthentication, universal logout, and device-bound sessions.",content:"The copilot can explain risk and policy but cannot issue tokens, reset factors, or terminate a session.",tags:["session","step up","webauthn","logout"]},
+];
